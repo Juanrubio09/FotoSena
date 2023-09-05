@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Up!</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="logout()">
+        <ion-icon slot="icon-only" name="log-out"></ion-icon>
+      </ion-button>
+    
+
+    <ion-button (click)="goToTab1()">
+      <ion-icon slot="icon-only" name="home-outline"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <div class="camara">
+    <ion-card (click)="openPicture()">
+      <ion-card-content>
+      <ion-icon  name="camera"></ion-icon>
+      <p>vive el momento</p>
+    </ion-card-content>
+  </ion-card>
+</div>
+
+<ion-card>
+  <img alt="" [src]="imageElement"> 
+   <ion-card-header>
+    <ion-card-title>Card Title</ion-card-title>
+    <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+  </ion-card-header>
+
+  <ion-card-content>
+    Here's a small text description for the card content. Nothing more, nothing less.
+  </ion-card-content>
+</ion-card>
+</ion-content>

@@ -1,0 +1,15 @@
+.camara{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    padding-top: 20px;
+}
+
+.button-row {
+    display: flex;
+    justify-content: center; /* Alinea los botones en el centro horizontal */
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }

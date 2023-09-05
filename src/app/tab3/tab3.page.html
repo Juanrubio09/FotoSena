@@ -1,0 +1,85 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Camara</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="logout()">
+        <ion-icon slot="icon-only" name="log-out"></ion-icon>
+      </ion-button>
+    
+
+    <ion-button (click)="goToTab1()">
+      <ion-icon slot="icon-only" name="home-outline"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<!-- <form (ngSubmit)="submitForm()"> 
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Publicación</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item> 
+          <ion-input [(ngModel)]="titulo" name="titulo" required></ion-input>
+          <ion-card-subtitle>Titulo</ion-card-subtitle>
+        </ion-item>
+        <ion-item>
+          <ion-input [(ngModel)]="descripcion" name="descripcion" required></ion-input>
+          <ion-card-subtitle>Descripcion</ion-card-subtitle>
+        </ion-item> 
+        
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+  
+   Agregar un campo de entrada de fecha 
+   (Tus botones existentes) ... 
+</form> -->
+
+
+
+<ion-content >
+  
+
+
+ <ion-row class="button-row"> 
+ <!-- <ion-button expand="block" (click)="saveImage()">
+    <ion-icon name="save"></ion-icon>
+    Guardar
+  </ion-button>-->
+  
+</ion-row>
+
+<ion-card>
+  <ion-card-content>
+    <div class="camara">
+      <ion-card (click)="takePicture()">
+        <ion-card-content>
+          <ion-icon  name="camera"></ion-icon>
+        </ion-card-content>
+      </ion-card>
+    </div>
+    <ion-card>
+      <img alt="" [src]="imageElement">     
+    </ion-card>
+    <ion-input [(ngModel)]="titulo" placeholder="Titulo"></ion-input>
+    <ion-textarea [(ngModel)]="descripcion" placeholder="Descripcion"></ion-textarea>
+    <ion-item>
+      <ion-label>{{ currentDate }}</ion-label>
+      <ion-card-subtitle>Fecha</ion-card-subtitle>
+    </ion-item>
+    <ion-button expand="block" (click)="saveImage()">
+      Publicar
+    </ion-button>
+    <ion-button expand="block"  (click)="goToTab1()">
+    <ion-icon name="close"></ion-icon>
+      Cancelar
+    </ion-button>
+  </ion-card-content>
+</ion-card>
+
+  
+</ion-content>
+

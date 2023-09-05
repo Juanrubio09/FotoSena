@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Inicio </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="logout()">
+        <ion-icon slot="icon-only" name="log-out"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Contenedor de búsqueda -->
+  <ion-card>
+    <ion-card-content>
+      <ion-searchbar placeholder="Buscar"></ion-searchbar>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="receivedData">
+    <img [src]="receivedData.imageSrc" alt="Imagen">
+    <ion-card-header>
+      <ion-card-title>{{ receivedData.title }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-card-subtitle>{{ receivedData.description }}</ion-card-subtitle>
+      <p>Fecha: {{ receivedData.currentDate }}</p>
+    </ion-card-content>
+  </ion-card>
+
+
+  
+
+  <!-- Resto del contenido de la página -->
+</ion-content>
